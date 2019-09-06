@@ -4,8 +4,6 @@ import Car from './Car';
 
 class Cars extends Component {
   render () {
-    console.log("this.props.cars from cars: ", this.props.cars);
-    console.log("this.props.locations from cars: ", this.props.locations);
     return (
       <Container>
 

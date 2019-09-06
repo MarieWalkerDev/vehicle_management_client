@@ -4,11 +4,10 @@ import Buttons from '../buttons/Buttons';
 import NumberFormat from 'react-number-format';
 
 const Description = (props) => {
+
   let convertedMiles = <NumberFormat value={props.car.miles} displayType={'text'} thousandSeparator={true} />
 
   let convertedPrice = <NumberFormat value={props.car.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
-
-  console.log('THIS IS WHAT I AM LOOKING FOR: ', props.car.location);
 
   let renderLocation = props.locationName ?
     <p>
@@ -41,6 +40,7 @@ const Description = (props) => {
 
       <Buttons
         id={props.car.id}
+        renderViewCar={props.renderViewCar}
         car={props.car}
         deleteCar={props.deleteCar}
         getOne={props.getOne}

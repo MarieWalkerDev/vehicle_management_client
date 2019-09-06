@@ -18,8 +18,7 @@ const Inventory = () => {
 
     const cars = await carData.json();
     const locations = await locData.json();
-    console.log('CARS: ', cars);
-    console.log('LOCATIONS: ', locations);
+    
     setCars(cars);
     setLocations(locations);
   }

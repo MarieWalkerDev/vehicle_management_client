@@ -11,6 +11,8 @@ const Car = (props) => {
     borderRadius: '10px'
   };
 
+  let renderViewCar = true;
+
   let carList = props.cars.map( car => {
     return (
       <Grid key={car.id} columns={2} style={gridStyle}>
@@ -19,6 +21,7 @@ const Car = (props) => {
 
           <Description
             car={car}
+            renderViewCar={renderViewCar}
             locationName={car.location.name}
             locationAddress={car.location.address}
             id={car.id}

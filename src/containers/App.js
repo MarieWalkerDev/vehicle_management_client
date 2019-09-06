@@ -137,7 +137,6 @@ class App extends Component {
 
 
   render () {
-    console.log('thisstataapp', this.state);
     return (
       <Router>
         <div className='App'>
@@ -146,9 +145,9 @@ class App extends Component {
           <Switch>
             <Route path='/' exact component={LoginRegister} />
             <Route path='/cars' exact component={Inventory} />
-            <Route path='/cars/:car_id' component={OneCar} />
-            <Route path='/cars/new' component={AddCar} />
-            <Route path='/cars/:car_id/edit' component={EditCar} />
+            <Route path='/cars/new' exact component={AddCar} />
+            <Route path='/cars/:car_id' exact component={OneCar} />
+            <Route path='/cars/:car_id/edit' exact component={EditCar} />
           </Switch>
 
           <Footer />

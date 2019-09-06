@@ -6,7 +6,6 @@ import Picture from '../cars/Picture';
 const OneCar = ({ match, locations }) => {
   useEffect(() => {
     fetchData();
-    console.log('MATCH: ', match);
   }, []);
 
   const [car, setCar] = useState({});
@@ -20,7 +19,6 @@ const OneCar = ({ match, locations }) => {
 
 
     const car = await carData.json();
-    console.log('CAR: ', car);
 
 
     setCar(car);
@@ -34,6 +32,8 @@ const OneCar = ({ match, locations }) => {
     borderRadius: '10px'
   };
 
+  let renderViewCar = false;
+
 
   return (
     <Container>
@@ -43,6 +43,7 @@ const OneCar = ({ match, locations }) => {
 
           <Description
             car={car}
+            renderViewCar={renderViewCar}
             id={car.id}
           />
 
