@@ -16,15 +16,15 @@ class NavBar extends Component {
 
           <List.Item>
             <List.Content>
-              <Link to='/about'>
-                <List.Header><Icon name='address card outline' circular /> About Us</List.Header>
+              <Link to='/'>
+                <List.Header><Icon name='sign-in' circular /> Login/SignUp</List.Header>
               </Link>
             </List.Content>
           </List.Item>
 
           <List.Item>
             <List.Content>
-              <Link to='/inventory'>
+              <Link to='/cars'>
                 <List.Header><Icon name='car' circular /> Inventory</List.Header>
               </Link>
             </List.Content>
@@ -32,7 +32,7 @@ class NavBar extends Component {
 
           <List.Item>
             <List.Content>
-              <Link to='/add-car'>
+              <Link to='/cars/new'>
                 <List.Header><Icon name='plus' circular /> Add Car</List.Header>
               </Link>
             </List.Content>

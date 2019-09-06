@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 class ViewBtn extends Component {
   render () {
     return (
       <div>
-        <Button
-          onClick={(e) => this.props.getOne(this.props.id, e)}
-        >
-          View Car
+        <Button>
+          <Link to={`/cars/${this.props.id}`}>
+            View Car
+          </Link>
         </Button>
       </div>
     );
@@ -16,3 +17,28 @@ class ViewBtn extends Component {
 };
 
 export default ViewBtn;
+
+
+
+//
+// import React, { Component } from 'react';
+// import { Button } from 'semantic-ui-react';
+// import { Link } from 'react-router-dom';
+//
+// class ViewBtn extends Component {
+//   render () {
+//     return (
+//       <div>
+//         <Button
+//           onClick={(e) => this.props.getOne(this.props.id, e)}
+//         >
+//           <Link to={`/cars/${this.props.id}`}>
+//             View Car
+//           </Link>
+//         </Button>
+//       </div>
+//     );
+//   };
+// };
+//
+// export default ViewBtn;
