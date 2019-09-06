@@ -19,6 +19,8 @@ const Car = (props) => {
 
           <Description
             car={car}
+            locationName={car.location.name}
+            locationAddress={car.location.address}
             id={car.id}
             deleteCar={props.deleteCar}
             getOne={props.getOne}

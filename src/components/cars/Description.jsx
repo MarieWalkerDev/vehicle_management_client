@@ -10,6 +10,15 @@ const Description = (props) => {
 
   console.log('THIS IS WHAT I AM LOOKING FOR: ', props.car.location);
 
+  let renderLocation = props.locationName ?
+    <p>
+      <b>LOCATION:</b> {props.locationName}<br />{props.locationAddress}
+    </p>
+    :
+    <p>
+      <b>LOCATION:</b> Alemeda Dealer<br />111 Alameda Road, Tempe, AZ
+    </p>;
+
   return (
     <Grid.Column>
       <h1><b>ID:</b> {props.car.id}</h1>
@@ -27,13 +36,12 @@ const Description = (props) => {
       </p>
 
 
-      <p>
-        <b>LOCATION:</b> {props.car.location}<br />{props.car.location}
-      </p>
+      {renderLocation}
 
 
       <Buttons
         id={props.car.id}
+        car={props.car}
         deleteCar={props.deleteCar}
         getOne={props.getOne}
       />

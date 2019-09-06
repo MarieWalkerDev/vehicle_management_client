@@ -9,6 +9,7 @@ class Buttons extends Component {
       <Button.Group size='large'>
         <ViewBtn
           id={this.props.id}
+          car={this.props.car}
           getOne={this.props.getOne}
         />
 

@@ -5,11 +5,13 @@ import Car from './Car';
 class Cars extends Component {
   render () {
     console.log("this.props.cars from cars: ", this.props.cars);
+    console.log("this.props.locations from cars: ", this.props.locations);
     return (
       <Container>
 
         <Car
           cars={this.props.cars}
+          locations={this.props.locations}
           deleteCar={this.props.deleteCar}
           getOne={this.props.getOne}
         />

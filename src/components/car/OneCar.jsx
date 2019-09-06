@@ -43,7 +43,6 @@ const OneCar = ({ match, locations }) => {
 
           <Description
             car={car}
-            locations={locations}
             id={car.id}
           />
 
